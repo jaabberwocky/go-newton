@@ -14,6 +14,10 @@ func Sqrt(x float64, ep float64) float64 {
 		ep = 0.00000001
 	}
 
+	if x < 0.0 {
+		return 0.0
+	}
+
 	// initial guess
 	z := 1.0
 	var change float64
@@ -46,6 +50,10 @@ func main() {
 	num, err1 = strconv.ParseFloat(args[1], 64)
 	if err1 != nil || err2 != nil {
 		panic("Uh oh! Conversion failed")
+	}
+
+	if num < 0.0 {
+		panic("Number cannot be less than zero")
 	}
 
 	fmt.Printf("Result: %f\n", Sqrt(num, ep))
