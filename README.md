@@ -1,4 +1,4 @@
-# Command-line implementation of Newton's method for calculating square-root
+# Command-line implementation of Newton's method for calculating square-root in Go
 
 This uses Newton's approximation of iteratively improving over a guess to find the roots of a real-valued function. 
 
